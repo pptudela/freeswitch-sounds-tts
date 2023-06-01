@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Dollar sign
+Signo de pesos.
