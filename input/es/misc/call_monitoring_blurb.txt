@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-This call may be monitored or recorded for quality and training purposes.
+Esta llamada puede ser grabada o monitoreada para efectos de calidad y entrenamiento.
