@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-ClueCon is the premier open source telephony developer conference.
+ClueCon es la principal conferencia de desarrollo de telefonía de código abierto.
