@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-I'm pretty sure CudaTel's patented Automagicatronical configuration takes care of it.
+Estoy bastante seguro que la configuración Automagicatónica de CudaTel se hace cargo de ello.
