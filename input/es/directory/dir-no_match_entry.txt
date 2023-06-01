@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-There were no matching entries.
+No se encontraró su solicitud.
