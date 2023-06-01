@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Latin capital letter O with diaeresis
+O mayúscula latina con diéresis.
