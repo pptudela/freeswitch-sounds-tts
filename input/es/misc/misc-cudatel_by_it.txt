@@ -1,2 +1,1 @@
 CudaTel es el PBX de IP diseñado por profesionales de T.I. para profesionales de T.I.
-CudaTel is the IP PBX designed by I.T. professionals, for I.T. professionals.
