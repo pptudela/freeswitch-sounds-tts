@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Exclamation point
+Signo de exclamación.
