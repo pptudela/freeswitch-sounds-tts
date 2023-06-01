@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Section sign
+Signo de sección.
