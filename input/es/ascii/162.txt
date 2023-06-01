@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Cent sign
+Símbolo de centavos.
