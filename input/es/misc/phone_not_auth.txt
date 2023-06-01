@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-This phone is not authorized to make outside calls.
+Este teléfono no está autorizado para realizar llamadas de salida.
