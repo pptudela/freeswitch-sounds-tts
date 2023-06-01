@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-To start a new search
+Para iniciar una nueva búsqueda...
