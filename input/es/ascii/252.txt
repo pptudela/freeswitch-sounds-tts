@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Latin capital letter U with diaeresis
+U latina mayúscula con diéresis.
