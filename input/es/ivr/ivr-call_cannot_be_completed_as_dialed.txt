@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Your call cannot be completed as dialed.
+El número marcado es incorrecto.
