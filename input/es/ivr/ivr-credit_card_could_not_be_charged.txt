@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-The credit card on file could not be charged.
+La tarjeta de crédito en el expediente no pudo ser cargada.
