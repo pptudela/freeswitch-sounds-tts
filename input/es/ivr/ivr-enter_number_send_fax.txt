@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Please enter the number to which I should send this fax, then press pound.
+Introduzca el número al cual debo enviar este fax, y presione la tecla signo de número.
