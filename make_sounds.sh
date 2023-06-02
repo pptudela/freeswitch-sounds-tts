@@ -26,7 +26,7 @@ if [[ ! -d ./input ]]; then
 fi
 
 if [ "$1" == "" ]; then
-	echo "Missing parameter 1: Please enter googletts or bingtts as parameter 1."
+	echo "Missing parameter 1: Please enter googletts or azuretts as parameter 1."
 	exit 1
 fi
 if [ "$2" == "" ]; then
@@ -173,11 +173,11 @@ if [[ x"$1" == x"googletts" ]]; then
 fi
 
 
-# BING TTS
+# AZURE TTS
 #
-if [[ x"$1" == x"bingtts" ]]; then
-	if [[ x"${BING_OAUTH_CLIENTID}" != x"" && x"${BING_OAUTH_CLIENTSECRET}" != x"" ]]; then
-		echo -e "\n\nNOW PROCESSING WITH ENGINE: BING TTS\n"
+if [[ x"$1" == x"azuretts" ]]; then
+	if [[ x"${AZURE_KEY}" != x"" && x"${AZURE_REGION}" != x"" ]]; then
+		echo -e "\n\nNOW PROCESSING WITH ENGINE: AZURE TTS\n"
 		
 		for FILE in $FILES; do
 			BASENAME="${FILE#.*/}"
@@ -193,9 +193,9 @@ if [[ x"$1" == x"bingtts" ]]; then
 				continue;
 			fi
 
-			OUTPUT_DIR_TMP="./cache/${LOCALE}/tts/bing/${FILENAME_FLAT%/*}"
-			OUTPUT_DIR="./output/${LOCALE}/tts/bing/${FILENAME_FLAT%/*}/16000"
-			OUTPUT_DIR8k="./output/${LOCALE}/tts/bing/${FILENAME_FLAT%/*}/8000"
+			OUTPUT_DIR_TMP="./cache/${LOCALE}/tts/azuretts/${FILENAME_FLAT%/*}"
+			OUTPUT_DIR="./output/${LOCALE}/tts/azuretts/${FILENAME_FLAT%/*}/16000"
+			OUTPUT_DIR8k="./output/${LOCALE}/tts/azuretts/${FILENAME_FLAT%/*}/8000"
 			OUTPUT_FILE_TMP="${OUTPUT_DIR_TMP}/${FILENAME##*/}.wav"
 			OUTPUT_FILE="${OUTPUT_DIR}/${FILENAME##*/}.wav"
 			OUTPUT_FILE8k="${OUTPUT_DIR8k}/${FILENAME##*/}.wav"
@@ -212,7 +212,6 @@ if [[ x"$1" == x"bingtts" ]]; then
 	
 			if [ ! -f "${OUTPUT_FILE_TMP}" ]; then
 				echo -n "Processing ${FILENAME} ... "
-				BING_OAUTH_TOKEN="`php oauth_bingtts.php "${BING_OAUTH_CLIENTID}" "${BING_OAUTH_CLIENTSECRET}"`"
 				mkdir -p "${OUTPUT_DIR_TMP}"
 
 				count=0
@@ -224,12 +223,10 @@ if [[ x"$1" == x"bingtts" ]]; then
 					fi
 
 					count=$(( count + 1 ))
-					LINE_ENCODED="$(perl -MURI::Escape -e 'print uri_escape($ARGV[0]);' "${LINE}")"
-					[ "${LOCALE}" == "zh_CN" ] && LOCALE="zh-CHS"
+					LINE_ENCODED="${LINE}"
 
-					curl -A "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17" \
-						-H "Authorization: Bearer ${BING_OAUTH_TOKEN}" \
-						-s "http://api.microsofttranslator.com/V2/Http.svc/Speak?language=${LOCALE}&format=audio/wav&options=MaxQuality&appid=&text=${LINE_ENCODED}" > "${OUTPUT_FILE_TMP}.${count}.wav"
+
+					spx synthesize --key "${AZURE_KEY}" --region "${AZURE_REGION}" --voice "${AZURE_VOICE_NAME}" --format 'Riff16Khz16BitMonoPcm' --text "${LINE_ENCODED}" --audio output "${OUTPUT_FILE_TMP}.${count}.wav"
 
 					if [ -e "${OUTPUT_FILE_TMP}.${count}.wav" ]; then
 						set +e
@@ -289,7 +286,7 @@ if [[ x"$1" == x"bingtts" ]]; then
 			fi
 		done
 	else
-		echo "Note: OAuth API credentials for BING missing in config file. See http://msdn.microsoft.com/en-us/library/hh454950.aspx"
+		echo "Configuration for AZURE missing in config file. See https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/spx-basics?tabs=windowsinstall%2Cterminal"
 		exit 1
 	fi
 fi
@@ -404,7 +401,7 @@ else
 	cd ./output
 
 	[ $1 == "googletts" ] && VOICE="./$2/tts/google"
-	[ $1 == "bingtts" ] && VOICE="./$2/tts/bing"
+	[ $1 == "azuretts" ] && VOICE="./$2/tts/azuretts"
 
 	FILENAME="`echo ${VOICE:1} | sed -e 's/\//-/g'`"
 	echo "freeswitch-sounds${FILENAME}-16000"
