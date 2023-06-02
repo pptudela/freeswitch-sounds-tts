@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-This conference is in Q and A mode.
+Esta conferencia está en modo de preguntas y respuestas.
