@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Please enter the destination telephone number, then press pound.
+Por favor introduzca el número telefónico de destino, y luego marque la tecla signo de número.
