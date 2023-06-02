@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-There is one other member in this conference.
+Hay otro miembro en esta conferencia.
