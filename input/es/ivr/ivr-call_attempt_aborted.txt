@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-The call attempt has been aborted.
+El intento de llamada ha sido abortado.
