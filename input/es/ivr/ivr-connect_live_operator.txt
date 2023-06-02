@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Please hold while we connect you to a live operator.
+Por favor espere mientras es conectado con un operador.
