@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-This conference is full. Please contact the conference moderator.
+Esta conferencia está llena. Por favor, póngase en contacto con el moderador.
