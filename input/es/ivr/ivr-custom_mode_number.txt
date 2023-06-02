@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Custom mode number...
+Número de modo personalizado.
