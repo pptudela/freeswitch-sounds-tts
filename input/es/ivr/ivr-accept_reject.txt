@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-To accept, press 1. To reject, press 2.
+Para aceptar, presione 1. Para rechazar, presione 2.
