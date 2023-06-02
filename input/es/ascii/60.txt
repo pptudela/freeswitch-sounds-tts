@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Less than sign.
+Signo de menor que
