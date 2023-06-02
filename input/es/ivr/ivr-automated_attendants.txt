@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Automated attendants.
+Sistemas de audiorespuesta automática.
