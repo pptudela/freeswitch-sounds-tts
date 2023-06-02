@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Call screening has been disabled.
+La revisión de llamadas ha sido desactivada.
