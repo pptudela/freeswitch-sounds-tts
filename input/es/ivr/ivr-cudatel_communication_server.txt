@@ -1,1 +1,1 @@
-CudaTel Communication Server
+Servidor de comunicación Cudatel.
