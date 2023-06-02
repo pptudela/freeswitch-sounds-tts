@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-After the tone, I will echo your audio back to you.
+Después del tono, mandaré un eco de su audio de vuelta a usted.
