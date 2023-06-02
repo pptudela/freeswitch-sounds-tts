@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-After the tone, I will send a delayed echo of your audio back to you.
+Después del tono, enviaré un eco retardado de su audio de vuelta a usted.
