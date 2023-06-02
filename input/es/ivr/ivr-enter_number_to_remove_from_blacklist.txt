@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-Please enter the number to be removed from the blacklist.
+Por favor introduzca el número que debe ser retirado de la lista negra.
