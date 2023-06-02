@@ -1,2 +1,1 @@
-#TODO Please translate the following text:
-...listeners in this conference.
+...oyentes en esta conferencia.
