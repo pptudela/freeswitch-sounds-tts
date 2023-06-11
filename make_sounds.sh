@@ -158,9 +158,8 @@ if [[ x"$1" == x"googletts" ]]; then
 				[ x"${MAXVOL}" != x"" ] && sox -v `echo ${MAXVOL}-0.3 | bc` "${OUTPUT_FILE}" "${OUTPUT_FILE}.volmax.wav" || cp "${OUTPUT_FILE}" "${OUTPUT_FILE}.volmax.wav"
 				rm -f "${OUTPUT_FILE}"
 				sox "${OUTPUT_FILE}.volmax.wav" "${OUTPUT_FILE}.imp.wav" silence 1 0.1 0.0% reverse
-				sox "${OUTPUT_FILE}.imp.wav" "${OUTPUT_FILE}.imp2.wav" silence 1 0.1 0.0% reverse
-				sox "${OUTPUT_FILE}.imp2.wav" "${OUTPUT_FILE}" tempo 1.25
-				rm -f "${OUTPUT_FILE}.volc" "${OUTPUT_FILE}.volmax.wav" "${OUTPUT_FILE}.imp.wav" "${OUTPUT_FILE}.imp2.wav"
+				sox "${OUTPUT_FILE}.imp.wav" "${OUTPUT_FILE}" silence 1 0.1 0.0% reverse
+				rm -f "${OUTPUT_FILE}.volc" "${OUTPUT_FILE}.volmax.wav" "${OUTPUT_FILE}.imp.wav"
 			fi
 		fi
 
